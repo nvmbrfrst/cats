@@ -6,7 +6,7 @@ const cats = [
         rate: 0,
         age: 1,
         description: "cat_number_one",
-        img_link: "https://cdn2.thecatapi.com/images/767.jpg"
+        image: "https://cdn2.thecatapi.com/images/767.jpg"
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ const cats = [
         rate: 0,
         age: 2,
         description: "cat_number_two",
-        img_link: "https://cdn2.thecatapi.com/images/1pt.jpg"
+        image: "https://cdn2.thecatapi.com/images/1pt.jpg"
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ const cats = [
         rate: 0,
         age: 3,
         description: "cat_number_three",
-        img_link: "https://cdn2.thecatapi.com/images/1pt.jpg"
+        image: "https://cdn2.thecatapi.com/images/1pt.jpg"
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ const cats = [
         rate: 0,
         age: 4,
         description: "cat_number_four",
-        img_link: "https://cdn2.thecatapi.com/images/e3r.jpg"
+        image: "https://cdn2.thecatapi.com/images/e3r.jpg"
     },
     {
         id: 5,
@@ -42,6 +42,6 @@ const cats = [
         rate: 0,
         age: 5,
         description: "cat_number_five",
-        img_link: "https://cdn2.thecatapi.com/images/ea0.jpg"
+        image: "https://cdn2.thecatapi.com/images/ea0.jpg"
     }
 ]
