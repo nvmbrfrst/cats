@@ -1,9 +1,13 @@
 class Popup {
+
+  // закрытие по 'escape'
   #handleEscUp = (evt) => {
     if (evt.key === "Escape") {
       this.close();
     }
   };
+
+
   constructor(classPopup) {
     this._popupElement = document.querySelector(`.${classPopup}`);
   }
@@ -18,11 +22,11 @@ class Popup {
     document.removeEventListener("keyup", this.#handleEscUp);
   }
 
+  // установка "слушателя"
   setEventListener() {
     this._popupElement.addEventListener("mousedown", (evt) => {
       if (
-        evt.target.classList.contains("popup") ||
-        !!evt.target.closest(".popup__close")
+        evt.target.classList.contains("popup") || !!evt.target.closest(".popup__close")
       ) {
         this.close();
       }

@@ -1,3 +1,5 @@
+// добавление картинки в pop-up
+
 class PopupWithImage extends Popup {
   constructor(className) {
     super(className);

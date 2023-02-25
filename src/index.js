@@ -5,6 +5,7 @@ const formCatAdd = document.querySelector('#popup-form-add');
 const popupAdd = new Popup('popup-add');
 const popupImage = new PopupWithImage('popup-cat-image');
 
+// сбор данных из формы, заполнение пустого объекта
 function serializeForm(elements) {
     const formData = {};
 
@@ -21,11 +22,12 @@ function serializeForm(elements) {
     return formData;
 }
 
+// "слушатель" формы добавления новой карточки
 function handleFormAddCat(e) {
     e.preventDefault();
     const elementsFormCat = [...formCatAdd.elements];
     const formData = serializeForm(elementsFormCat);
-    console.log(formData);
+
     const newElement = new Card(formData, '#card-template', handleClickCatImage);
     cardsContainer.prepend(newElement.getElement());
 
@@ -43,6 +45,7 @@ btnOpenPopup.addEventListener('click', (e) => {
     popupAdd.open()
 })
 
+// перебор карточек
 cats.forEach(catData => {
     const newElement = new Card(catData, '#card-template', handleClickCatImage);
     cardsContainer.append(newElement.getElement());

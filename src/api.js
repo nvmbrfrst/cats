@@ -1,24 +1,9 @@
-// Написать запрос c fetch() который:
-// - добавляет информацию о коте на сайт +
-// - запрашивает все записи с котами +
-// - запрашивает конкретную запись с котом+
-// - редактирует информацию у конкретной записи с котом +
-// - удаляет информацию о коте
-// - запрашивает все айдишники
-
-// GET https://cats.petiteweb.dev/api/single/:user/show - отобразить всех котиков
-// GET https://cats.petiteweb.dev/api/single/:user/ids - отобразить все возможные айди котиков
-// GET https://cats.petiteweb.dev/api/single/:user/show/:id  - отобразить конкретного котика
-// POST https://cats.petiteweb.dev/api/single/:user/add - добавить котика
-// PUT https://cats.petiteweb.dev/api/single/:user/update/:id - изменить информацию о котике
-// DELETE  https://cats.petiteweb.dev/api/single/:user/delete/:id - удалить котика из базы данных
-
 const config = {
   baseUrl: "https://cats.petiteweb.dev/api/single/nvmbrfrst",
   headers: {
     "content-type": "application/json"
   }
-};
+}
 
 class Api {
   #getResponse(res) {
@@ -32,18 +17,23 @@ class Api {
     (this.#baseUrl = config.baseUrl), (this.#headers = config.headers);
   }
 
+
+  // GET https://cats.petiteweb.dev/api/single/nvmbrfrst/show - отобразить всех котов
   getAllCats() {
     return fetch(`${this.#baseUrl}/show`).then(this.#getResponse);
   }
 
+  // GET https://cats.petiteweb.dev/api/single/nvmbrfrst/show/:id  - отобразить конкретного кота
   getCatById(idCat) {
     return fetch(`${this.#baseUrl}/show/${idCat}`).then(this.#getResponse);
   }
 
+  // GET https://cats.petiteweb.dev/api/single/nvmbrfrst/ids - отобразить все возможные айди котов
   getIdsCats() {
     return fetch(`${this.#baseUrl}/ids`).then(this.#getResponse);
   }
 
+  // POST https://cats.petiteweb.dev/api/single/nvmbrfrst/add - добавить кота
   addNewCat(data) {
     return fetch(`${this.#baseUrl}/add`, {
       method: 'POST',
@@ -52,6 +42,7 @@ class Api {
     }).then(this.#getResponse);
   }
 
+  // PUT https://cats.petiteweb.dev/api/single/nvmbrfrst/update/:id - изменить информацию о коте
   updateCatById(idCat, data) {
     return fetch(`${this.#baseUrl}/update/${idCat}`, {
       method: "PUT",
@@ -60,6 +51,7 @@ class Api {
     }).then(this.#getResponse);
   }
 
+  // DELETE  https://cats.petiteweb.dev/api/single/:user/delete/:id - удалить кота из базы данных
   deleteCatById(idCat) {
     return fetch(`${this.#baseUrl}/delete/${idCat}`, {
       method: "DELETE"

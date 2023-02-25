@@ -29,7 +29,7 @@ const cats = [
     {
         id: 4,
         name: "cat_004",
-        favorite: false,
+        favourite: false,
         rate: 0,
         age: 4,
         description: "cat_number_four",
