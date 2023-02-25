@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,13 +18,13 @@
             <button class="btn" id="add"><i class="fa-solid fa-plus"></i></button>
         </div>
     </header>
-    
-<!-- динамические данные -->
+
+    <!-- динамические данные -->
     <main class="main container">
         <section class="cards">
         </section>
     </main>
-<!-- динамические данные -->
+    <!-- динамические данные -->
 
     <footer class="footer">
         <div class="container footer__container">
@@ -33,8 +34,8 @@
                 <a class="socials__link" href="#"><i class="fa-brands fa-github socials__icon"></i></a>
                 <a class="socials__link" href="#"><i class="fa-brands fa-vk socials__icon"></i></a>
                 <a class="socials__link" href="#"><i class="fa-brands fa-telegram socials__icon"></i></a>
-            </nav>
-        </div>
+                </nav>
+            </div>
     </footer>
 
     <div class="popup popup-cat-image">
@@ -45,9 +46,9 @@
     </div>
 
     <div class="popup popup-add">
-        <div class="popup__container" >
+        <div class="popup__container">
             <button class="popup__close btn"><i class="fa-solid fa-xmark"></i></button>
-            <h2>Добавить питомца</h2>
+            <h2>Новая карточка</h2>
             <form class="form" id="popup-form-add">
                 <div class="form__image"></div>
                 <input type="number" class="form__input" name="id" min="1" required placeholder="id">
@@ -57,21 +58,23 @@
                 <textarea name="description" class="form__input form__textarea" placeholder="Описание"></textarea>
                 <label class="form__checkbox-wrap">
                     <input type="checkbox" name="favourite" class="form__checkbox" placeholder="">
-                    <span class="form__label">Любимчик</span>  
+                    <span class="form__label">Любимчик</span>
                     <span class="form__fake-checkbox"><i class="fa-regular fa-circle-check"></i></span>
                 </label>
                 <input type="url" class="form__input" name="image" placeholder="Ссылка на фото">
-                <button type="submit" class="form__btn btn">Добавить кошку</button>
+                <button type="submit" class="form__btn btn">Добавить</button>
             </form>
         </div>
     </div>
 
     <template id="card-template">
-        
+
         <!-- <DOCUMENT_FRAGMENT> -->
         <div class="card">
             <img src="#" alt="Изображение" class="card__image">
-            <a href="#" class="card__link"><h2 class="card__name"></h2></a>
+            <a href="#" class="card__link">
+                <h2 class="card__name"></h2>
+            </a>
             <button class="card__like" aria-label="Поставить лайк"><i class="fa-solid fa-heart fa-2x"></i></button>
         </div>
         <!-- <DOCUMENT_FRAGMENT> -->
@@ -84,6 +87,7 @@
     <script src="./src/popup.js" defer></script>
     <script src="./src/popup-image.js" defer></script>
     <script src="./src/index.js" defer></script>
-    
+
 </body>
+
 </html>
