@@ -13,7 +13,7 @@ class Card {
     }
     
 
-// рендеринг
+// рендеринг/визуализация
     constructor(data, selectorTemplate, handleClickCatImage) {
         this.#data = data;
         this.#selectorTemplate =selectorTemplate;
