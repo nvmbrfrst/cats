@@ -45,7 +45,7 @@ btnOpenPopup.addEventListener('click', (e) => {
     popupAdd.open()
 })
 
-// перебор карточек
+// перебор карточек из основного массива и вывод на главную
 cats.forEach(catData => {
     const newElement = new Card(catData, '#card-template', handleClickCatImage);
     cardsContainer.append(newElement.getElement());
