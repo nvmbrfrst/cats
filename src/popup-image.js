@@ -1,6 +1,8 @@
 // добавление картинки в pop-up
 
-class PopupWithImage extends Popup {
+import { Popup } from "./popup.js";
+
+export class PopupWithImage extends Popup {
   constructor(className) {
     super(className);
   }

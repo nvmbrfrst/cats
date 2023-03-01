@@ -1,4 +1,4 @@
-class Popup {
+export class Popup {
 
   // закрытие по 'escape'
   #handleEscUp = (evt) => {
@@ -6,7 +6,6 @@ class Popup {
       this.close();
     }
   };
-
 
   constructor(classPopup) {
     this._popupElement = document.querySelector(`.${classPopup}`);
@@ -22,7 +21,7 @@ class Popup {
     document.removeEventListener("keyup", this.#handleEscUp);
   }
 
-  // установка "слушателя"
+  // установка "слушателя" на кнопку закрытия
   setEventListener() {
     this._popupElement.addEventListener("mousedown", (evt) => {
       if (
