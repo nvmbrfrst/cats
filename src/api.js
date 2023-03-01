@@ -1,7 +1,7 @@
 const config = {
   baseUrl: "https://cats.petiteweb.dev/api/single/nvmbrfrst",
   headers: {
-    "content-type": "application/json"
+    "content-type": "application/json",
   },
 };
 
@@ -38,7 +38,7 @@ class Api {
     return fetch(`${this.#baseUrl}/add`, {
       method: 'POST',
       headers: this.#headers,
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     }).then(this.#getResponse);
   }
 
@@ -47,14 +47,14 @@ class Api {
     return fetch(`${this.#baseUrl}/update/${idCat}`, {
       method: "PUT",
       headers: this.#headers,
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     }).then(this.#getResponse);
   }
 
   // DELETE  https://cats.petiteweb.dev/api/single/nvmbrfrst/delete/:id - удалить кота из базы данных
   deleteCatById(idCat) {
     return fetch(`${this.#baseUrl}/delete/${idCat}`, {
-      method: "DELETE"
+      method: "DELETE",
     }).then(this.#getResponse);
   }
 }

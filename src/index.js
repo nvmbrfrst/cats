@@ -11,7 +11,7 @@ const btnOpenPopup = document.querySelector('#add');
 const btnOpenPopupLogin = document.querySelector("#login");
 
 const formCatAdd = document.querySelector('#popup-form-add');
-const formLogin = document.querySelector("#popup-form-login");
+const formLogin = document.querySelector('#popup-form-login');
 
 // куки
 const isAuth = Cookies.get("email");
@@ -29,7 +29,7 @@ function serializeForm(elements) {
     const formData = {};
 
     elements.forEach(input => {
-        if (input.type === 'submit' || input.type === 'button') return
+        if (input.type === 'submit' || input.type === 'button') return;
         if (input.type === 'checkbox') {
             formData[input.name] = input.checked;
         }
@@ -66,7 +66,7 @@ function handleFormAddCat(e) {
 }
 
 function handleClickCatImage(dataSrc) {
-    popupImage.open(dataSrc)
+    popupImage.open(dataSrc);
 }
 
 // метод обработки pop-up окна авторизации
